@@ -126,7 +126,7 @@
 
 --- a/target/linux/rockchip/image/Makefile
 +++ b/target/linux/rockchip/image/Makefile
-@@ -75,4 +75,17 @@ endef
+@@ -79,4 +79,30 @@ endif
  
  include $(SUBTARGET).mk
  
@@ -157,4 +157,3 @@
 +endef
 +
  $(eval $(call BuildImage))
- 
