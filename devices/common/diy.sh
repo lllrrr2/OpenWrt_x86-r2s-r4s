@@ -39,6 +39,7 @@ sed -i "s/192.168.1/10.0.0/" package/base-files/files/bin/config_generate
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/generic/hack-5.10 target/linux/generic/hack-5.10
 rm -rf target/linux/generic/hack-5.10/{220-gc_sections*,781-dsa-register*,780-drivers-net*,996-fs-ntfs3*}
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/generic/backport-5.10 target/linux/generic/backport-5.10
+rm -rf target/linux/generic/backport-5.10/802-v6.1-nvmem*
 ) &
 
 sed -i "/BuildPackage,miniupnpd-iptables/d" feeds/packages/net/miniupnpd/Makefile
