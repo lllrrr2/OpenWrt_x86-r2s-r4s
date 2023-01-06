@@ -12,6 +12,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/rockchip target/l
 rm -rf target/linux/rockchip/{.svn,patches-5.15/.svn}
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/rockchip/patches-5.15 target/linux/rockchip/patches-5.15
 rm -rf target/linux/rockchip/patches-5.15/{002-net-usb*,003-dt-bindings*,006-rockchip-rk3399*}
+svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/generic/backport-5.15 target/linux/generic/backport-5.15
 
 curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/linux/modules/video.mk -o package/kernel/linux/modules/video.mk
 
