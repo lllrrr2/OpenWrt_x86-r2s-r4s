@@ -331,25 +331,20 @@ index 6437dfbe62103..56a704f5a1686 100644
  		caldata_extract_mmc "factory" 0x0 0x1000
  		;;
  	esac
-diff --git a/target/linux/mediatek/filogic/base-files/lib/preinit/81_fix_eeprom b/target/linux/mediatek/filogic/base-files/lib/preinit/81_fix_eeprom
-index bbda755a97924..ee36ffe7cd6c4 100644
---- a/target/linux/mediatek/filogic/base-files/lib/preinit/81_fix_eeprom
-+++ b/target/linux/mediatek/filogic/base-files/lib/preinit/81_fix_eeprom
-@@ -2,6 +2,13 @@
- 
- preinit_fix_eeprom() {
- 	case $(board_name) in
+diff --git a/target/linux/mediatek/filogic/base-files/etc/hotplug.d/firmware/11-mt76-caldata b/target/linux/mediatek/filogic/base-files/etc/hotplug.d/firmware/11-mt76-caldata
+index 8eda14f82b51d..82b1bb8f88ef6 100644
+--- a/target/linux/mediatek/filogic/base-files/etc/hotplug.d/firmware/11-mt76-caldata
++++ b/target/linux/mediatek/filogic/base-files/etc/hotplug.d/firmware/11-mt76-caldata
+@@ -55,7 +55,8 @@ case "$FIRMWARE" in
+ 	;;
+ "mediatek/mt7986_eeprom_mt7976_dual.bin")
+ 	case "$board" in
+-	glinet,gl-mt6000)
++	glinet,gl-mt6000|\
 +	jdcloud,re-cs-05)
-+		mmc_part=$(find_mmc_part factory)
-+		FIRMWARE="mediatek/mt7986_eeprom_mt7976_dual.bin"
-+		[ ! -e /lib/firmware/"$FIRMWARE" ] && \
-+			export FIRMWARE="$FIRMWARE" && \
-+			caldata_extract_mmc "factory" 0x0 0x1000
-+		;;
- 	mercusys,mr90x-v1)
- 		eeprom="/lib/firmware/mediatek/mt7986_eeprom_mt7975_dual.bin"
- 		oem="/tmp/tp_data/MT7986_EEPROM.bin"
-
+ 		caldata_extract_mmc "factory" 0x0 0x1000
+ 		;;
+ 	esac
 diff --git a/target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh b/target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 index 9649a2c99b1b8..8619c72b860ff 100755
 --- a/target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh

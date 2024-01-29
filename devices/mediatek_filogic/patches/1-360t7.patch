@@ -46,22 +46,3 @@
 -  ARTIFACT/bl31-uboot.fip := mt7981-bl31-uboot qihoo_360t7
  endef
  TARGET_DEVICES += qihoo_360t7
-
---- a/package/boot/uboot-envtools/files/mediatek_filogic
-+++ b/package/boot/uboot-envtools/files/mediatek_filogic
-@@ -53,8 +53,12 @@ xiaomi,redmi-router-ax6000-stock)
- 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x10000" "0x20000"
- 	ubootenv_add_uci_sys_config "/dev/mtd2" "0x0" "0x10000" "0x20000"
- 	;;
-+qihoo,360t7)
-+	ubootenv_add_uci_config "/dev/mtd2" "0x0" "0x20000" "0x20000" "1"
-+	;;
-+h3c,magic-nx30-pro)
-+	ubootenv_add_uci_config "/dev/mtd2" "0x0" "0x80000" "0x20000" "4"
-+	;;
--h3c,magic-nx30-pro|\
--qihoo,360t7|\
- tplink,tl-xdr4288|\
- tplink,tl-xdr6086|\
- tplink,tl-xdr6088|\
- 
