@@ -8,4 +8,4 @@ git clone https://github.com/JiaY-shi/nss-packages.git package/nss-packages
 
 rm -rf feeds/kiddin9/{fibocom_QMI_WWAN,quectel_Gobinet,shortcut-fe}
 
-rm -rf devices/common/patches/rootfstargz.patch
+rm -rf devices/common/patches/rootfstargz.patch devices/common/patches/kernel_version.patch

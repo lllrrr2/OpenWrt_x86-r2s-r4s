@@ -1,6 +1,6 @@
 --- a/target/linux/rockchip/image/armv8.mk
 +++ b/target/linux/rockchip/image/armv8.mk
-@@ -162,6 +162,51 @@
+@@ -141,6 +141,52 @@ define Device/friendlyarm_nanopi-r5s
  endef
  TARGET_DEVICES += friendlyarm_nanopi-r5s
  
