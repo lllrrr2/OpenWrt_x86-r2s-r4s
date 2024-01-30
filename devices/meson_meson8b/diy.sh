@@ -8,7 +8,7 @@ git_clone_path master https://github.com/coolsnowwolf/lede target/linux/generic/
 
 git_clone_path master https://github.com/coolsnowwolf/lede target/linux/meson
 
-rm -rf package/feeds/kiddin9/{quectel_Gobinet,rtl8821cu,rtl88x2bu} devices/common/patches/kernel_version.patch devices/common/patches/rootfstargz.patch
+rm -rf package/feeds/kiddin9/quectel_Gobinet devices/common/patches/kernel_version.patch devices/common/patches/rootfstargz.patch
 
 curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/generic/pending-6.1/613-netfilter_optional_tcp_window_check.patch -o target/linux/generic/pending-6.1/613-netfilter_optional_tcp_window_check.patch
 
