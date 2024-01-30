@@ -1,6 +1,6 @@
 --- a/package/firmware/ipq-wifi/Makefile
 +++ b/package/firmware/ipq-wifi/Makefile
-@@ -51,7 +51,9 @@ ALLWIFIBOARDS:= \
+@@ -54,7 +54,9 @@ ALLWIFIBOARDS:= \
  	zte_mf289f \
  	zte_mf287 \
  	zte_mf287plus \
@@ -11,14 +11,15 @@
  
  ALLWIFIPACKAGES:=$(foreach BOARD,$(ALLWIFIBOARDS),ipq-wifi-$(BOARD))
  
-@@ -165,5 +167,7 @@ $(eval $(call generate-ipq-wifi-package,zte_mf289f,ZTE MF289F))
- $(eval $(call generate-ipq-wifi-package,zte_mf287,ZTE MF287))
- $(eval $(call generate-ipq-wifi-package,zte_mf287plus,ZTE MF287Plus))
- $(eval $(call generate-ipq-wifi-package,zyxel_nbg7815,Zyxel NBG7815))
+@@ -159,6 +161,8 @@ $(eval $(call generate-ipq-wifi-package,netgear_rax120v2,Netgear RAX120v2))
+ $(eval $(call generate-ipq-wifi-package,netgear_wax218,Netgear WAX218))
+ $(eval $(call generate-ipq-wifi-package,netgear_wax620,Netgear WAX620))
+ $(eval $(call generate-ipq-wifi-package,netgear_wax630,Netgear WAX630))
 +$(eval $(call generate-ipq-wifi-package,qihoo_v6,QIHOO 360V6))
-+$(eval $(call generate-ipq-wifi-package,cmiot_ax18,CMIOT AX18))
- 
- $(foreach PACKAGE,$(ALLWIFIPACKAGES),$(eval $(call BuildPackage,$(PACKAGE))))
++$(eval $(call generate-ipq-wifi-package,zyxel_nbg7815,Zyxel NBG7815))
+ $(eval $(call generate-ipq-wifi-package,qnap_301w,QNAP 301w))
+ $(eval $(call generate-ipq-wifi-package,prpl_haze,prpl Haze))
+ $(eval $(call generate-ipq-wifi-package,redmi_ax6,Redmi AX6))
 
 --- a/target/linux/qualcommax/image/ipq60xx.mk
 +++ b/target/linux/qualcommax/image/ipq60xx.mk
