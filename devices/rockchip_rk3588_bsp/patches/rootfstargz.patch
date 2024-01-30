@@ -49,10 +49,10 @@
    DEVICE_IMG_PREFIX := $(IMG_PREFIX)-$(1)
    DEVICE_IMG_NAME = $$(DEVICE_IMG_PREFIX)-$$(1)-$$(2)
    IMAGE_SIZE :=
+   NAND_SIZE :=
 +  ROOTFSTZ = $$(DEVICE_IMG_PREFIX)-rootfs.tar.gz
    KERNEL_PREFIX = $$(DEVICE_IMG_PREFIX)
    KERNEL_SUFFIX := -kernel.bin
-   KERNEL_INITRAMFS_SUFFIX = $$(KERNEL_SUFFIX)
 @@ -568,7 +607,7 @@ define Device/Build/kernel
  endef
  

@@ -17,7 +17,7 @@ CONFIG_SENSORS_PWM_FAN=y
 
 sed -i "/KernelPackage,ptp/d" package/kernel/linux/modules/other.mk
 
-rm -rf feeds/kiddin9/{quectel_MHI,shortcut-fe,quectel_Gobinet,rtl88*} devices/common/patches/kernel_version.patch
+rm -rf feeds/kiddin9/{quectel_MHI,shortcut-fe,quectel_Gobinet,rtl88*} devices/common/patches/kernel_version.patch devices/common/patches/rootfstargz.patch
 
 sed -i "/friendlyelec/d" package/feeds/kiddin9/base-files/files/lib/preinit/02_sysinfo
 
